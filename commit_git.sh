@@ -47,7 +47,6 @@ then
 fi
 
 
-
 echo $mode
 echo $msg
 echo $path
@@ -63,5 +62,6 @@ elif [ "$mode" == "set" ]; then git add "$path"
 else git add . .gitignore
 fi
 git commit -m "$msg"
-git remote add origin "$link"
-git push --force origin master 
+#git remote add origin "$link"
+git remote set-url origin "$link"
+git push --force origin master
