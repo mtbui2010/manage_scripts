@@ -9,10 +9,11 @@ def upload_to_git(git_path, update_dir, username=None, password=None):
         git_path = 'https://{}:{}@{}'.format(username, password, git_path)
     git_command = './commit_git.sh -m "commit" -l "{}"'.format(git_path)
 
-    os.system('cd {}'.format(update_dir))
+    os.chdir(update_dir)
+    print(os.getcwd())
     os.system(git_command)
     print('{} completed'.format('+' * 5))
-    os.system('cd {}'.format(cwd))
+    os.chdir(cwd)
 
 def upload_to_gits_auth(git_paths, update_dirs):
     username = input('Git ID?')
