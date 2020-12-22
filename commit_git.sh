@@ -7,7 +7,7 @@ help_exit()
    echo -e "\t-s  mode: [DEFAULT]: ignore \n\t\tall - all file, \n\t\tignore - ignore files in .gitignore, \n\t\tset - specific path"
    echo -e "\t-m msg: commit message"
    echo -e "\t-p path: file locations to be added [DEFALT]: [work_dir]"
-   echo -e "\t-l link: github link [DEFAULT]: https://github.com/mtbui2010/packaging_scripts.git"
+   echo -e "\t-l link: github link [DEFAULT]: https://github.com/mtbui2010/manage_scripts.git"
    echo -e "\t-r remove_git: [DEFAULT]: remove_git"
    exit 1 
 }
@@ -39,7 +39,7 @@ then
 fi
 if [ -z "$link" ]
 then
-   link="https://github.com/mtbui2010/packaging_scripts.git"
+   link="https://github.com/mtbui2010/manage_scripts.git"
 fi
 if [ -z "$remove_git" ]
 then
